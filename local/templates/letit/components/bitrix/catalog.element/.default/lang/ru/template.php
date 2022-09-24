@@ -35,4 +35,15 @@ $MESS["CT_BCE_CATALOG_RANGE_MORE"] = "и более";
 $MESS["CT_BCE_CATALOG_RATIO_PRICE"] = "цена за #RATIO#";
 $MESS["CT_BCE_CATALOG_GIFT_BLOCK_TITLE_DEFAULT"] = "Выберите один из подарков к этому товару";
 $MESS["CT_BCE_CATALOG_GIFTS_MAIN_BLOCK_TITLE_DEFAULT"] = "Выберите один из товаров, чтобы получить подарок";
+$MESS["CHARACTER_TITLE"] = "характеристики";
+$MESS["DOCUMENT_TITLE"] = "Документация";
+$MESS["DETAIL_TITLE"] = "Описание";
+$MESS["DOWNLOAD_BTN"] = "Скачать";
+$MESS["GO_TITLE"] = "перейти";
+$MESS["BUY_TITLE"] = "купить";
+$MESS["MAIN_CHARACTER"] = "Основные характеристики";
+$MESS["WARNING_TITLE"] = "Внимание!";
+$MESS["TITLE_MODAL"] = "Вы переходите на другой сайт";
+$MESS["SITE_TITLE"] = "steaming.ru";
+$MESS["DESC_MODAL"] = "где будет осуществлятся ваша покупка";
 ?>

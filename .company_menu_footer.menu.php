@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Компания",
+		"/about/",
+		Array(),
+		Array(),
+		""
+	),
+    Array(
+        "О компании",
+        "/about/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Новости",
+        "/news/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Жизнь с Lelit",
+        "/life/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Магазины",
+        "/shops/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Сервисные центры",
+        "/service/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Контакты",
+        "/catalog/gladilnye-sistemy/",
+        Array(),
+        Array(),
+        ""
+    ),
+);
+?>

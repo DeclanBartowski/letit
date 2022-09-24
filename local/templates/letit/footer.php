@@ -66,31 +66,19 @@ if (! defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
         ),
         false
     ); ?>
-
-  
     <footer class="footer">
         <div class="footer__content container">
-            <div class="footer__header">
-                <div class="footer__header-logo">
-                    <img class="footer__logo" src="<?= SITE_TEMPLATE_PATH ?>/images/wtite-logo.svg" alt="LELIT">
-                </div>
-                <form class="footer__form">
-                    <div class="footer__search-content">
-                        <h3 class="footer__search__title">
-                            Подпишитесь на наши новинки
-                        </h3>
-                        <div class="footer__search">
-                            <input class="footer__search-input" placeholder="Введите email" type="text">
-                            <button class="footer__search-btn">Подписаться</button>
-                        </div>
-                    </div>
-                    <div class="footer__form-checkbox">
-                        <input id="checkbox-footer" class="checkbox__form-checked-input" type="checkbox">
-                        <label for="checkbox-footer" class="checkbox__form-checked"></label>
-                        <p class="checkbox__form-personal">Я соглашаюсь на обработку персональных данных.</p>
-                    </div>
-                </form>
-            </div>
+            <?$APPLICATION->IncludeComponent(
+                "asd:subscribe.quick.form",
+                "footer",
+                Array(
+                    "FORMAT" => "text",
+                    "INC_JQUERY" => "N",
+                    "NOT_CONFIRM" => "N",
+                    "RUBRICS" => array(0=>"1",),
+                    "SHOW_RUBRICS" => "N"
+                )
+            );?>
             <div class="footer__nav">
                 <div class="footer__info">
                     <div class="footer__info-mail">
@@ -121,43 +109,40 @@ if (! defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
                 </div>
                 <div class="footer__sitemap">
                     <div class="footer__sitemap-item">
-                        <h5 class="footer__sitemap-title"><a class="footer__sitemap-link" href="#">Каталог</a></h5>
-                        <ul class="footer__sitemap-list">
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Парогенераторы</a>
-                            </li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Гладильные
-                                    доски</a></li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link"
-                                                                     href="#">Аксессуары</a></li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "menu_footer",
+                            Array(
+                                "ROOT_MENU_TYPE" => "catalog_menu_footer",
+                            )
+                        );?>
                     </div>
                     <div class="footer__sitemap-item">
-                        <h5 class="footer__sitemap-title"><a class="footer__sitemap-link" href="#">Компания</a></h5>
-                        <ul class="footer__sitemap-list">
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">О
-                                    компании</a></li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Новости</a>
-                            </li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Жизнь с
-                                    Lelit</a></li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Магазины</a>
-                            </li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Сервисные
-                                    центры</a></li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Контакты</a>
-                            </li>
-                        </ul>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "menu_footer",
+                            Array(
+                                "ROOT_MENU_TYPE" => "company_menu_footer",
+                            )
+                        );?>
+
                     </div>
                     <div class="footer__sitemap-item">
-                        <h5 class="footer__sitemap-title"><a class="footer__sitemap-link" href="#">Документы</a></h5>
-                        <ul class="footer__sitemap-list">
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Пользовательское
-                                    соглашение</a></li>
-                            <li class="footer__sitemap-list-item"><a class="footer__sitemap-link" href="#">Политика
-                                    конфиденциальности</a></li>
-                        </ul>
-                        <h5 class="footer__sitemap-title footer__sitemap-title-map"><a class="footer__sitemap-link"
-                                                                                       href="#">карта сайта</a></h5>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "menu_footer",
+                            Array(
+                                "ROOT_MENU_TYPE" => "documents_menu_footer",
+                            )
+                        );?>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "menu_footer",
+                            Array(
+                                "ROOT_MENU_TYPE" => "map_menu_footer",
+                                'CLASS_TITLE' => 'footer__sitemap-title-map'
+                            )
+                        );?>
                     </div>
                 </div>
             </div>

@@ -141,202 +141,39 @@ $arParams["ELEMENT_SORT_ORDER"] = $arSort[$_SESSION['catalog_sort']]['order'];
 
 			<!-- filters -->
 			<div class="filters__main">
-				<!-- btn open -->
-				<div class="filters__main-btn filters__main-item">
-					<svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M7.5 4H17.5" stroke="white"/>
-						<circle cx="4.5" cy="4" r="3.5" stroke="white"/>
-						<path d="M10.5 13L0.5 13" stroke="white"/>
-						<circle r="3.5" transform="matrix(-1 0 0 1 13.5 13)" stroke="white"/>
-					</svg>
-					<div class="filters__main-item-title">Фильтры</div>
-				</div>
-				<!-- price filter -->
-				<div class="filters__main-item">
-					<div class="filters__main-select filters__select-t select-price">
-						<div class="filters__main-select-title">Цена</div>
-						<div class="filters__main-select-ico">
-							<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-							</svg>
-						</div>
-					</div>
 
-					<!-- price range -->
-					<div class="filters__price-wrapper price-wrapper filters__main-checkboxes">
-						<div class="filters__price-input">
-							<div class="filters__price-field">
-								<span>от</span>
-								<input type="number" class="filters__price-input-min" value="0">
-							</div>
-							<div class="filters__price-field">
-								<span>до</span>
-								<input type="number" class="filters__price-input-max" max="35200" value="35200">
-							</div>
-							<div class="filters__price-currency">₽</div>
-						</div>
-						<div class="filters__price-slider">
-							<div class="filters__price-progress"></div>
-						</div>
-						<div class="filters__price-range-input">
-							<input type="range" class="filters__price-range-min" min="0" max="35200"  value="0" step="100">
-							<input type="range" class="filters__price-range-max" min="0" max="35200"  value="35200" step="100">
-						</div>
-						<div class="filters__price-search">
-							<span class="filters__price-search-close"></span>
-							выбрано: от
-							<span>3 198</span> ₽  до <span>35 200</span> ₽</div>
-					</div>
-				</div>
-				<!-- power-i filter -->
-				<div class="filters__main-item">
-					<div class="filters__main-select filters__select-t select-power-i">
-						<div class="filters__main-select-title">Мощность утюга</div>
-						<div class="filters__main-select-ico">
-							<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-							</svg>
-						</div>
-					</div>
-					<!-- checkboxes Мощность утюга -->
-					<div class="filters__main-checkboxes checkbox-power-i">
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">2 х 800 Вт</span>
-								(<span class="filters__bar-quantity">1</span>)
-							</p>
-							<input id="check-1" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-1" class="checkbox__form-checked"></label>
-						</div>
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">800 Вт</span>
-								(<span class="filters__bar-quantity">14</span>)
-							</p>
-							<input id="check-2" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-2" class="checkbox__form-checked"></label>
-						</div>
-					</div>
-				</div>
-				<!-- power-b filter -->
-				<div class="filters__main-item">
-					<div class="filters__main-select filters__select-t select-power-b">
-						<div class="filters__main-select-title">Мощность бойлера</div>
-						<div class="filters__main-select-ico">
-							<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-							</svg>
-						</div>
-					</div>
-					<!-- checkboxes Мощность бойлера -->
-					<div class="filters__main-checkboxes checkbox-power-b">
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">2 х 800 Вт</span>
-								(<span class="filters__bar-quantity">1</span>)
-							</p>
-							<input id="check-3" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-3" class="checkbox__form-checked"></label>
-						</div>
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">800 Вт</span>
-								(<span class="filters__bar-quantity">14</span>)
-							</p>
-							<input id="check-4" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-4" class="checkbox__form-checked"></label>
-						</div>
-					</div>
-				</div>
-				<!-- pressure filter -->
-				<div class="filters__main-item">
-					<div class="filters__main-select filters__select-t select-pressure">
-						<div class="filters__main-select-title">Рабочее давление</div>
-						<div class="filters__main-select-ico">
-							<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-							</svg>
-						</div>
-					</div>
-					<!-- checkboxes Рабочее давление -->
-					<div class="filters__main-checkboxes checkbox-pressure">
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">2 х 800 Вт</span>
-								(<span class="filters__bar-quantity">1</span>)
-							</p>
-							<input id="check-5" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-5" class="checkbox__form-checked"></label>
-						</div>
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">800 Вт</span>
-								(<span class="filters__bar-quantity">14</span>)
-							</p>
-							<input id="check-6" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-6" class="checkbox__form-checked"></label>
-						</div>
-					</div>
-				</div>
-				<!--  -->
-				<div class="filters__main-item">
-					<div class="filters__main-select filters__select-t select-pressuremax">
-						<div class="filters__main-select-title">Максимальное давление</div>
-						<div class="filters__main-select-ico">
-							<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-							</svg>
-						</div>
-					</div>
-					<!-- checkboxes Максимальное давление -->
-					<div class="filters__main-checkboxes checkbox-pressuremax">
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">2 х 800 Вт</span>
-								(<span class="filters__bar-quantity">1</span>)
-							</p>
-							<input id="check-23" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-23" class="checkbox__form-checked"></label>
-						</div>
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">800 Вт</span>
-								(<span class="filters__bar-quantity">14</span>)
-							</p>
-							<input id="check-24" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-24" class="checkbox__form-checked"></label>
-						</div>
-					</div>
-				</div>
-				<div class="filters__main-item">
-					<div class="filters__main-select filters__select-t select-voltage">
-						<div class="filters__main-select-title">Напряжение</div>
-						<div class="filters__main-select-ico">
-							<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-							</svg>
-						</div>
-					</div>
-					<!-- checkboxes Напряжение -->
-					<div class="filters__main-checkboxes checkbox-voltage">
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">2 х 800 Вт</span>
-								(<span class="filters__bar-quantity">1</span>)
-							</p>
-							<input id="check-31" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-31" class="checkbox__form-checked"></label>
-						</div>
-						<div class="filters__bar-checkbox">
-							<p class="filters__bar-descr">
-								<span class="filters__bar-text">800 Вт</span>
-								(<span class="filters__bar-quantity">14</span>)
-							</p>
-							<input id="check-32" class="checkbox__form-checked-input" type="checkbox">
-							<label for="check-32" class="checkbox__form-checked"></label>
-						</div>
-					</div>
-				</div>
+                <?
+                $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.smart.filter",
+                    "horizontal",
+                    array(
+                        "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+                        "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                        "SECTION_ID" => $arCurSection['ID'],
+                        "FILTER_NAME" => $arParams["FILTER_NAME"],
+                        "PRICE_CODE" => $arParams["~PRICE_CODE"],
+                        "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                        "CACHE_TIME" => $arParams["CACHE_TIME"],
+                        "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+                        "SAVE_IN_SESSION" => "N",
+                        "FILTER_VIEW_MODE" => $arParams["FILTER_VIEW_MODE"],
+                        "XML_EXPORT" => "N",
+                        "SECTION_TITLE" => "NAME",
+                        "SECTION_DESCRIPTION" => "DESCRIPTION",
+                        'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
+                        "TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
+                        'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
+                        'CURRENCY_ID' => $arParams['CURRENCY_ID'],
+                        "SEF_MODE" => $arParams["SEF_MODE"],
+                        "SEF_RULE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["smart_filter"],
+                        "SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
+                        "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+                        "INSTANT_RELOAD" => $arParams["INSTANT_RELOAD"],
+                    ),
+                    $component,
+                    array('HIDE_ICONS' => 'Y')
+                );
+                ?>
 			</div>
 			<!-- sort -->
 			<div class="filters__sort">
@@ -364,310 +201,40 @@ $arParams["ELEMENT_SORT_ORDER"] = $arSort[$_SESSION['catalog_sort']]['order'];
                     <?$APPLICATION->ShowViewContent('product_count');?>
 				</div>
 			</div>
-			<!-- filter sidebar -->
 			<div class="filters__bar">
-				<form class="filters__bar-content">
-					<div class="filters__closed-btn"></div>
-					<h3 class="filters__bar-title">
-						Фильтр по
-						параметрам
-					</h3>
-					<div class="filters__bar-item filters__bar-price">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Цена</div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<!-- price range -->
-						<div class="price-wrapper filters__bar-wrapper filters__bar-price-wrapper">
-							<div class="filters__price-input">
-								<div class="filters__price-field">
-									<span>от</span>
-									<input type="number" class="filters__price-input-min" value="0">
-								</div>
-								<div class="filters__price-field">
-									<span>до</span>
-									<input type="number" class="filters__price-input-max" max="35200" value="35200">
-								</div>
-								<div class="filters__price-currency">₽</div>
-							</div>
-							<div class="filters__price-slider">
-								<div class="filters__price-progress progress-filterbar"></div>
-							</div>
-							<div class="filters__price-range-input">
-								<input type="range" class="filters__price-range-min" min="0" max="35200"  value="0" step="100">
-								<input type="range" class="filters__price-range-max" min="0" max="35200"  value="35200" step="100">
-							</div>
-							<div class="filters__price-search">выбрано: от
-								<span>3 198</span> ₽  до <span>35 200</span> ₽</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Мощность утюга</div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2 х 800 Вт</span>
-									(<span class="filters__bar-quantity">1</span>)
-								</p>
-								<input id="check-11" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-11" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">800 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-12" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-12" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Мощность бойлера</div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">1000 Вт</span>
-									(<span class="filters__bar-quantity">10</span>)
-								</p>
-								<input id="check-13" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-13" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">1150 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-14" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-14" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">1400 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-15" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-15" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">1500 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-16" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-16" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2000 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-34" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-34" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">4000 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-35" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-35" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Рабочее давление</div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2 х 800 Вт</span>
-									(<span class="filters__bar-quantity">1</span>)
-								</p>
-								<input id="check-38" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-38" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">800 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-37" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-37" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Максимальное давление </div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2 х 800 Вт</span>
-									(<span class="filters__bar-quantity">1</span>)
-								</p>
-								<input id="check-40" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-40" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">800 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-41" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-41" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Напряжение </div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2 х 800 Вт</span>
-									(<span class="filters__bar-quantity">1</span>)
-								</p>
-								<input id="check-17" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-17" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">800 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-18" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-18" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title-box">
-								<div class="filters__bar-select-title">Рабочая мощность </div>
-								<div class="filters__tip-btn">
-									<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<circle cx="10" cy="10" r="9.5" stroke="#D6D6D6"/>
-										<path d="M9.9162 5.18663C11.0056 5.18663 11.6425 5.7883 11.6425 6.8078C11.6425 8.81337 8.64246 9.73259 8.64246 10.9861C8.64246 11.4039 8.92737 11.6379 9.24581 11.7549L11.2235 9.94986C12.2291 9.01393 13 8.17827 13 6.62396C13 4.91922 11.8101 4 9.96648 4C8.27374 4 7.46927 4.55153 7 4.98607L7.87151 6.02228C8.24022 5.6546 8.7933 5.18663 9.9162 5.18663ZM8.92737 15.0139C8.92737 15.5655 9.36313 16 9.93296 16C10.5196 16 10.9553 15.5655 10.9553 15.0139C10.9553 14.4123 10.5196 13.9777 9.93296 13.9777C9.37989 13.9777 8.92737 14.429 8.92737 15.0139Z" fill="#7A7A7A"/>
-									</svg>
-								</div>
-							</div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__tip">Это электрическая мощность, потребляемая бытовым прибором от электросети. </div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2 х 800 Вт</span>
-									(<span class="filters__bar-quantity">1</span>)
-								</p>
-								<input id="check-21" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-21" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">800 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-22" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-22" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- item -->
-					<div class="filters__bar-item">
-						<div class="filters__main-select filters__bar-select">
-							<div class="filters__bar-select-title">Вес </div>
-							<div class="filters__main-select-ico">
-								<svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 1L7.5 8L1 0.999999" stroke="#16171B" stroke-opacity="0.5" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="filters__bar-wrapper">
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">2 х 800 Вт</span>
-									(<span class="filters__bar-quantity">1</span>)
-								</p>
-								<input id="check-19" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-19" class="checkbox__form-checked"></label>
-							</div>
-							<div class="filters__bar-checkbox">
-								<p class="filters__bar-descr">
-									<span class="filters__bar-text">800 Вт</span>
-									(<span class="filters__bar-quantity">14</span>)
-								</p>
-								<input id="check-20" class="checkbox__form-checked-input" type="checkbox">
-								<label for="check-20" class="checkbox__form-checked"></label>
-							</div>
-						</div>
-					</div>
-					<!-- btns -->
-					<div class="filters__bar-btns">
-						<button class="filters__bar-reset" type="reset">
-                    <span>
-                        сбросить
-                    </span>
-						</button>
-						<button class="filters__bar-send">Применить</button>
-					</div>
-					<div class="filters__mul"></div>
-				</form>
-				<div class="filters__products-found">
-					<span class="filters__products-text">Найдено</span>
-					<span class="filters__products-total">20</span>
-					<span class="filters__products-text">товаров</span>
-					<div class="filters__products-btn">Показать</div>
-				</div>
+                <?
+                $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.smart.filter",
+                    "",
+                    array(
+                        "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+                        "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                        "SECTION_ID" => $arCurSection['ID'],
+                        "FILTER_NAME" => $arParams["FILTER_NAME"],
+                        "PRICE_CODE" => $arParams["~PRICE_CODE"],
+                        "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                        "CACHE_TIME" => $arParams["CACHE_TIME"],
+                        "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+                        "SAVE_IN_SESSION" => "N",
+                        "FILTER_VIEW_MODE" => $arParams["FILTER_VIEW_MODE"],
+                        "XML_EXPORT" => "N",
+                        "SECTION_TITLE" => "NAME",
+                        "SECTION_DESCRIPTION" => "DESCRIPTION",
+                        'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
+                        "TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
+                        'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
+                        'CURRENCY_ID' => $arParams['CURRENCY_ID'],
+                        "SEF_MODE" => $arParams["SEF_MODE"],
+                        "SEF_RULE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["smart_filter"],
+                        "SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
+                        "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+                        "INSTANT_RELOAD" => $arParams["INSTANT_RELOAD"],
+                    ),
+                    $component,
+                    array('HIDE_ICONS' => 'Y')
+                );
+                ?>
 			</div>
-
 		</div>
 		<!-- контент -->
 		<?$intSectionID = $APPLICATION->IncludeComponent(

@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Каталог",
+		"/catalog/",
+		Array(),
+		Array(),
+		""
+	),
+    Array(
+        "Парогенераторы",
+        "/catalog/parogeneratory/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Гладильные доски",
+        "/catalog/gladilnye-sistemy/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Аксессуары",
+        "/catalog/aksessuary/",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>

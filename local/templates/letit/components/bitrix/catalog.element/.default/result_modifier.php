@@ -32,3 +32,36 @@ if($arResult['PROPERTIES']['DOCUMENTS']['VALUE']){
            ];
         }
 }
+
+
+$res = CIBlockElement::GetList(Array(), [
+    'IBLOCK_ID' => 1
+], false, false, ['NAME', 'PREVIEW_PICTURE', 'PREVIEW_TEXT']);
+while($ob = $res->Fetch())
+{
+    if(!empty($ob['PREVIEW_PICTURE'])) $ob['PREVIEW_PICTURE'] = CFile::GetPath($ob['PREVIEW_PICTURE']);
+    $arResult['LINE_BANNERS'][] = $ob;
+}
+
+$arResult['FULL_CHARACTER'] =false;
+$arResult['MIN_CHARACTER'] = [];
+
+foreach ($arResult["DISPLAY_PROPERTIES"] as $value)
+{
+    if(!empty($value['VALUE'])) {
+        $arResult['FULL_CHARACTER'] = true;
+        break;
+    }
+}
+
+$res = CIBlockElement::GetList(['SORT' => 'ASC'], [
+    'IBLOCK_ID' => 16
+], false, false, ['NAME', 'CODE']);
+while($ob = $res->Fetch())
+{
+    if(empty($arResult['PROPERTIES'][$ob['CODE']]['VALUE'])) continue;
+    $arResult['MIN_CHARACTER'][] = [
+        'NAME' =>  $arResult['PROPERTIES'][$ob['CODE']]['NAME'],
+        'VALUE' =>  $arResult['PROPERTIES'][$ob['CODE']]['VALUE'],
+    ];
+}

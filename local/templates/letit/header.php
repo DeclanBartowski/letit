@@ -41,13 +41,13 @@ CJSCore::Init('jquery');
                     </div>
                     <div class="header__search-close"></div>
                 </div>
-                <form class="header__form-search" action="">
+                <form class="header__form-search" action="/search/">
                     <label class="header__search-label">
                         <div class="header__search-ico-box">
                             <img class="header__search-ico" src="<?= SITE_TEMPLATE_PATH ?>/images/ico/search.svg"
                                  alt="Поиск">
                         </div>
-                        <input class="header__search-input search-input" placeholder="Я ищу..." type="text">
+                        <input class="header__search-input search-input" placeholder="Я ищу..." type="text" name="q">
                         <div class="header__search-search">
                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -57,6 +57,7 @@ CJSCore::Init('jquery');
                                       stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
+                            <?/*
                         <div class="search__tips">
                             <ul class="search__tips-list">
                                 <li class="search__tip">
@@ -75,7 +76,7 @@ CJSCore::Init('jquery');
                                         парогенеротором, мощным парогенератором Lelit PS-11N</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>*/?>
                     </label>
                     <button class="header__search-btn" type="reset"></button>
                 </form>
@@ -120,40 +121,13 @@ CJSCore::Init('jquery');
                 </button>
                 <div class="header__menu-opened">
                     <div class="menu">
-                        <div class="menu__content">
-                            <button class="menu__closed-btn"></button>
-                            <nav class="menu__nav">
-                                <ul class="menu__list">
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">Парогенераторы</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">Гладильные доски</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">Аксессуары</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">О компании</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">новости</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">Жизнь с lelit</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">Магазины-партнеры Lelit</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">сервисные центры</a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a href="#" class="menu__link">Контакты</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "menu_header",
+                            Array(
+                                "ROOT_MENU_TYPE" => "header_menu",
+                            )
+                        );?>
                         <div class="header__mail">
                             <img class="header__mail-img" src="<?= SITE_TEMPLATE_PATH ?>/images/ico/header/mail.svg"
                                  alt="Почта">
