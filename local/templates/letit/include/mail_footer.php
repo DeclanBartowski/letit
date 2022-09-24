@@ -1,0 +1,1 @@
+<a class="footer__mail-text" href="mailto:info@lelit.ru">info@lelit.ru</a>

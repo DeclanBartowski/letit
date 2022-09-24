@@ -1,0 +1,6 @@
+.pagination__page-item-prev{
+    transform: rotate(180deg);
+}
+.pagination__page-item{
+  color: #16171b;
+}
